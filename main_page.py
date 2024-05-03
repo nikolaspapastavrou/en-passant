@@ -3,7 +3,7 @@ load_dotenv()  # take environment variables from .env.
 import streamlit as st
 import streamlit.components.v1 as components
 import chess
-import streamlit_scrollable_textbox as stx
+# import streamlit_scrollable_textbox as stx
 
 from gpt_script import ChatApp
 from eleven_labs import ElevenVoice
@@ -118,10 +118,10 @@ with cols[1]:
         '<div class="scrollable-textbox-top-margin">',
         unsafe_allow_html=True
     )
-    with st.container():
-        records = ["MOVES\n--------------------------------"]
-        records.append(error)
-        # html( "<p>" + '\n\n'.join(records) + "</p>", scrolling=True)
-        for key, value in list(st.session_state['moves'].items())[1:]:
-            records.append( ('Player 1' if value['current_player'] == 'Player 2'else 'Player 2') + ' played ' + value['last_move'][-2:])
-        stx.scrollableTextbox('\n\n'.join(records), height = 500, border=True)
+    # with st.container():
+    #     records = ["MOVES\n--------------------------------"]
+    #     records.append(error)
+    #     # html( "<p>" + '\n\n'.join(records) + "</p>", scrolling=True)
+    #     for key, value in list(st.session_state['moves'].items())[1:]:
+    #         records.append( ('Player 1' if value['current_player'] == 'Player 2'else 'Player 2') + ' played ' + value['last_move'][-2:])
+    #     stx.scrollableTextbox('\n\n'.join(records), height = 500, border=True)
