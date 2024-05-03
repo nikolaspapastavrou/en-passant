@@ -2,7 +2,6 @@ from dotenv import load_dotenv
 load_dotenv()  # take environment variables from .env.
 import streamlit as st
 import streamlit.components.v1 as components
-from streamlit.components.v1 import html
 import chess
 import streamlit_scrollable_textbox as stx
 
